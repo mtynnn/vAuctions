@@ -26,281 +26,330 @@
 
 # chat messages from the auction house
 chat:
-  already-sold: "§cERROR! This item has already been sold!"
-  already-sold2: "§cThis item has already been sold!"
-  non-existent: "§cERROR! This item has been removed!"
-  non-existent2: "§cThis item has been removed!"
-  not-enough-money: "§cYou don't have enough money to buy this item!"
-  inventory-full: "§cYour inventory is full!
-    &nPlease empty a slot in order to take the item!"
-  admin-expire-auction: "§b-------------------------------------------------
-    &n§aYou successfully expired the auction
-    &n§rReason: %reason%
-    &n§b-------------------------------------------------"
-  admin-delete-auction: "§b-------------------------------------------------
-    &n§aYou successfully deleted the auction
-    &n§rReason: %reason%
-    &n§b-------------------------------------------------"
-  expired-auction-by-admin: "§4-------------------------------------------------
-    &n§cYour auction was expired by a moderator
-    &n§7Reason: %reason%
-    &n§4-------------------------------------------------"
-  deleted-auction-by-admin: "§4-------------------------------------------------
-    &n§cYour auction was deleted by a moderator
-    &n§7Reason: %reason%
-    &n§4-------------------------------------------------"
-  own-auction: "This is your own auction! You cannot buy it."
-  auction-canceled: "§b-------------------------------------------------
-    &n§eYour auction was canceled!
-    &n§b-------------------------------------------------"
-  collect-sold-auction: "§b-------------------------------------------------
-    &n§eYou collected an auction for %price%!
-    &n§b-------------------------------------------------"
-  purchase-auction: "§b-------------------------------------------------
-    &n§eYou purchased an item from §7%player%§e's auction
-    &n§b-------------------------------------------------"
+  already-sold: "<red>¡ERROR! ¡Este item ya ha sido vendido!"
+  already-sold2: "<red>¡Este item ya ha sido vendido!"
+  non-existent: "<red>¡ERROR! ¡Este item ha sido eliminado!"
+  non-existent2: "<red>¡Este item ha sido eliminado!"
+  not-enough-money: "<red>¡No tienes suficiente dinero para comprar este item!"
+  inventory-full:
+    - "<red>¡Tu inventario está lleno!"
+    - "Por favor, vacía un espacio para tomar el item!"
+  admin-expire-auction:
+    - "<aqua>-------------------------------------------------"
+    - "<green>Has expirado la subasta exitosamente"
+    - "<reset>Razón: %reason%"
+    - "<aqua>-------------------------------------------------"
+  admin-delete-auction:
+    - "<aqua>-------------------------------------------------"
+    - "<green>Has eliminado la subasta exitosamente"
+    - "<reset>Razón: %reason%"
+    - "<aqua>-------------------------------------------------"
+  expired-auction-by-admin:
+    - "<dark_red>-------------------------------------------------"
+    - "<red>Tu subasta fue expirada por un moderador"
+    - "<gray>Razón: %reason%"
+    - "<dark_red>-------------------------------------------------"
+  deleted-auction-by-admin:
+    - "<dark_red>-------------------------------------------------"
+    - "<red>Tu subasta fue eliminada por un moderador"
+    - "<gray>Razón: %reason%"
+    - "<dark_red>-------------------------------------------------"
+  own-auction: "¡Esta es tu propia subasta! No puedes comprarla."
+  auction-canceled:
+    - "<aqua>-------------------------------------------------"
+    - "<yellow>¡Tu subasta fue cancelada!"
+    - "<aqua>-------------------------------------------------"
+  collect-sold-auction:
+    - "<aqua>-------------------------------------------------"
+    - "<yellow>¡Recolectaste una subasta por %price%!"
+    - "<aqua>-------------------------------------------------"
+  purchase-auction:
+    - "<aqua>-------------------------------------------------"
+    - "<yellow>Compraste un item de la subasta de <gray>%player%"
+    - "<aqua>-------------------------------------------------"
   sold-message:
-    prefix: "§6[Auction] §7%player%§e bought %item%§e for %price% "
-    interaction: "§f§l[CLICK]"
-    auto-collect: "§6[Auction] §7%player%§e bought %item%§e! §6+%price%"
-  auction-announcement: "§6[Auction] §7%player%§e is selling %item%§e x%amount% for %price%"
-  invalid-amount: "§cThat is not a valid amount!"
+    prefix: "<gold>[Subasta] <gray>%player%<yellow> compró %item%<yellow> por %price% "
+    interaction: "<white><bold>[CLICK]"
+    auto-collect: "<gold>[Subasta] <gray>%player%<yellow> compró %item%<yellow>! <gold>+%price%"
+  auction-announcement: "<gold>[Subasta] <gray>%player%<yellow> está vendiendo %item%<yellow> x%amount% por %price%"
+  invalid-amount: "<red>¡Esa no es una cantidad válida!"
 
 inventory-titles:
-  admin-confirm-gui: "Confirm Action"
-  admin-menu: "Admin Menu"
-  auction-house: "Auction House"
-  cancel-auction: "Cancel Auction"
-  collect-expired: "Collect Expired Item"
-  collect-sold: "Collect Sold Item"
-  my-auctions: "My Auctions"
-  anvil-search: "Search Item"
-  anvil-admin-search: "Admin Search Item"
-  anvil-admin-expire-message: "Expire Item Reason"
-  anvil-admin-delete-message: "Delete Item Reason"
-  anvil-set-amount: "Set Amount"
+  admin-confirm-gui: "Confirmar Acción"
+  admin-menu: "Menú de Admin"
+  auction-house: "Casa de Subastas"
+  cancel-auction: "Cancelar Subasta"
+  collect-expired: "Recoger Item Expirado"
+  collect-sold: "Recoger Item Vendido"
+  my-auctions: "Mis Subastas"
+  anvil-search: "Buscar Item"
+  anvil-admin-search: "Admin Buscar Item"
+  anvil-admin-expire-message: "Razón de Expiración"
+  anvil-admin-delete-message: "Razón de Eliminación"
+  anvil-set-amount: "Establecer Cantidad"
 items:
   next-page:
-    name: "§aNext Page"
-    lore: "§7%page%/%pages%
-      &n
-      &n§eRight-Click to skip!
-      &n§aClick to turn the page!"
+    name: "<green>Siguiente Página"
+    lore:
+      - "<gray>%page%/%pages%"
+      - ""
+      - "<yellow>¡Click-Derecho para saltar!"
+      - "<green>¡Click para pasar página!"
   previous-page:
-    name: "§aPrevious Page"
-    lore: "§7%page%/%pages%
-      &n
-      &n§eRight-Click to skip!
-      &n§aClick to turn the page!"
+    name: "<green>Página Anterior"
+    lore:
+      - "<gray>%page%/%pages%"
+      - ""
+      - "<yellow>¡Click-Derecho para saltar!"
+      - "<green>¡Click para pasar página!"
   search:
-    name: "§aSearch"
-    lore: "§7Find Items by name, type or enchants
-      &n
-      &n§7Filter: %filter%
-      &n
-      &n§eRight-Click to clear!
-      &n§aClick to set filter!"
+    name: "<green>Buscar"
+    lore:
+      - "<gray>Encuentra items por"
+      - "<gray>nombre, tipo o encantamientos"
+      - "<gray>Filtro: <aqua>%filter%"
+      - ""
+      - "<yellow>¡Click-Derecho para limpiar!"
+      - "<green>¡Click para establecer filtro!"
   locked-slot:
-    name: "§cLocked Slot"
+    name: "<red>Espacio Bloqueado"
   refresh:
-    name: "§aRefresh"
-    lore: "§7Click to refresh the menu"
+    name: "<green>Actualizar"
+    lore:
+      - "<gray>Click para actualizar el menú"
   back-main-menu:
-    name: "§aMain Menu"
-    lore: "§7Click to go back!"
+    name: "<green>Menú Principal"
+    lore:
+      - "<gray>¡Click para volver!"
   back-my-auctions:
-    name: "§aMy Auctions"
-    lore: "§7Click to go back!"
+    name: "<green>Mis Subastas"
+    lore:
+      - "<gray>¡Click para volver!"
   info:
-    name: "§aInfo"
-    lore: "§7To set up a new auction use
-      &n§7/ah sell 1000
-      &n§7while holding the item to sell in your hand
-      &n§7The number will be the price of the item
-      &n§7Current tax is %tax%
-      &n§8 - auction house made by ElaineQheart"
+    name: "<green>Info"
+    lore:
+      - "<gray>Para crear una nueva subasta usa"
+      - "<gray>/ah sell 1000"
+      - "<gray>mientras sostienes el item en tu mano"
+      - "<gray>El número será el precio del item"
+      - "<gray>El impuesto actual es %tax%"
+      - "<dark_gray> - casa de subastas hecha por ElaineQheart"
   my-auctions:
-    name: "§aMy Auctions"
-    lore: "§7Click to view your auctions!"
+    name: "<green>Mis Subastas"
+    lore:
+      - "<gray>¡Click para ver tus subastas!"
   sort-highest-price:
-    name: "§aSort"
-    lore: "
-      &n§b► Highest Price
-      &n§7 Lowest Price
-      &n§7 Ending Soon
-      &n§7 Alphabetical
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<aqua>► Precio Más Alto"
+      - "<gray> Precio Más Bajo"
+      - "<gray> Termina Pronto"
+      - "<gray> Alfabético"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   sort-lowest-price:
-    name: "§aSort"
-    lore: "
-      &n§7 Highest Price
-      &n§b► Lowest Price
-      &n§7 Ending Soon
-      &n§7 Alphabetical
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<gray> Precio Más Alto"
+      - "<aqua>► Precio Más Bajo"
+      - "<gray> Termina Pronto"
+      - "<gray> Alfabético"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   sort-ending-soon:
-    name: "§aSort"
-    lore: "
-      &n§7 Highest Price
-      &n§7 Lowest Price
-      &n§b► Ending Soon
-      &n§7 Alphabetical
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<gray> Precio Más Alto"
+      - "<gray> Precio Más Bajo"
+      - "<aqua>► Termina Pronto"
+      - "<gray> Alfabético"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   sort-alphabetical:
-    name: "§aSort"
-    lore: "
-      &n§7 Highest Price
-      &n§7 Lowest Price
-      &n§7 Ending Soon
-      &n§b► Alphabetical
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<gray> Precio Más Alto"
+      - "<gray> Precio Más Bajo"
+      - "<gray> Termina Pronto"
+      - "<aqua>► Alfabético"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   my-sort-all:
-    name: "§aSort"
-    lore: "
-      &n§b► All Auctions
-      &n§7 Sold Items
-      &n§7 Expired Items
-      &n§7 Active Auctions
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<aqua>► Todas las Subastas"
+      - "<gray> Items Vendidos"
+      - "<gray> Items Expirados"
+      - "<gray> Subastas Activas"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   my-sort-sold:
-    name: "§aSort"
-    lore: "
-      &n§7 All Auctions
-      &n§b► Sold Items
-      &n§7 Expired Items
-      &n§7 Active Auctions
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<gray> Todas las Subastas"
+      - "<aqua>► Items Vendidos"
+      - "<gray> Items Expirados"
+      - "<gray> Subastas Activas"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   my-sort-expired:
-    name: "§aSort"
-    lore: "
-      &n§7 All Auctions
-      &n§7 Sold Items
-      &n§b► Expired Items
-      &n§7 Active Auctions
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<gray> Todas las Subastas"
+      - "<gray> Items Vendidos"
+      - "<aqua>► Items Expirados"
+      - "<gray> Subastas Activas"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   my-sort-active:
-    name: "§aSort"
-    lore: "
-      &n§7 All Auctions
-      &n§7 Sold Items
-      &n§7 Expired Items
-      &n§b► Active Auctions
-      &n
-      &n§eRight-Click to go backwards!
-      &n§aClick to switch sort!"
+    name: "<green>Ordenar"
+    lore:
+      - ""
+      - "<gray> Todas las Subastas"
+      - "<gray> Items Vendidos"
+      - "<gray> Items Expirados"
+      - "<aqua>► Subastas Activas"
+      - ""
+      - "<yellow>¡Click-Derecho para ir atrás!"
+      - "<green>¡Click para cambiar orden!"
   cancel:
-    name: "§cCancel"
+    name: "<red>Cancelar"
   collect-expired:
-    name: "§cCollect Expired Item"
-    lore: "
-      &n§eClick to collect!"
+    name: "<red>Recoger Item Expirado"
+    lore:
+      - ""
+      - "<yellow>¡Click para recoger!"
   cancel-auction:
-    name: "§cCancel Auction Item"
-    lore: "
-      &n§eClick to collect!"
+    name: "<red>Cancelar Item de Subasta"
+    lore:
+      - ""
+      - "<yellow>¡Click para recoger!"
   admin-info:
-    name: "§aInfo"
-    lore: "§7Click on an item to expire or delete it
-      &n§7Expired items can be collected again by the player
-      &n§7Deleted items will be removed from the auction house
-      &n§7and you will get them in your inventory"
+    name: "<green>Info"
+    lore:
+      - "<gray>Click en un item para expirarlo o eliminarlo"
+      - "<gray>Los items expirados pueden ser recogidos de nuevo por el jugador"
+      - "<gray>Los items eliminados serán removidos de la casa de subastas"
+      - "<gray>y los obtendrás en tu inventario"
   admin-cancel-auction:
-    name: "§cCancel Auction Item"
-    lore: "
-      &n§eThe player won't get the item back! You will collect it!"
+    name: "<red>Cancelar Item de Subasta"
+    lore:
+      - ""
+      - "<yellow>¡El jugador no recuperará el item! ¡Tú lo recogerás!"
   admin-expire-auction:
-    name: "§eExpire Auction Item"
-    lore: "
-      &n§eClick to make it expire!"
+    name: "<yellow>Expirar Item de Subasta"
+    lore:
+      - ""
+      - "<yellow>¡Click para hacerlo expirar!"
   confirm:
-    name: "§aConfirm"
+    name: "<green>Confirmar"
   deleted:
-    name: "§cCanceled Item"
+    name: "<red>Item Cancelado"
   auction:
     lore:
-      default: "§8------------------
-        &n§7Seller: %player%
-        &n§7Price: %price%
-        &n "
-      own-auction: "§aThis is your own item!
-        &n "
-      admin-deleted: "§cDeleted by a moderator!"
-      admin-expired: "§cExpired by a moderator!"
-      admin-message: "§7Reason: %reason%"
-      expired: "§cExpired!"
-      sold: "§6Sold!
-        &n§7Buyer: %buyer%"
-      partially-sold: "§6Sold: §e%sold%/%total%
-        &n§7Buyer: %buyer%&n "
-      waiting-list: "Auction starting in: %time%"
-      active: "Ends in: %time%"
-      buying-item: "§8------------------
-        &n§e§nBUYING ITEM!"
-      shulker-preview: "§f§oRight-Click to preview!"
+      default:
+        - "<dark_gray>------------------"
+        - "<gray>Vendedor: %player%"
+        - "<gray>Precio: %price%"
+        - " "
+      own-auction:
+        - "<green>¡Este es tu propio item!"
+        - " "
+      admin-deleted:
+        - "<red>¡Eliminado por un moderador!"
+      admin-expired:
+        - "<red>¡Expirado por un moderador!"
+      admin-message:
+        - "<gray>Razón: %reason%"
+      expired:
+        - "<red>¡Expirado!"
+      sold:
+        - "<gold>¡Vendido!"
+        - "<gray>Comprador: %buyer%"
+      partially-sold:
+        - "<gold>Vendido: <yellow>%sold%/%total%"
+        - "<gray>Comprador: %buyer%"
+        - " "
+      waiting-list:
+        - "La subasta comienza en: %time%"
+      active:
+        - "Termina en: %time%"
+      buying-item:
+        - "<dark_gray>------------------"
+        - "<yellow><underlined>¡COMPRANDO ARTÍCULO!"
+      shulker-preview:
+        - "<white><italic>¡Click-Derecho para previsualizar!"
   admin-expire-item:
-    lore: "§8------------------
-      &n§7Seller: %player%
-      &n§7Price: %price%
-      &n
-      &n§cExpired by a moderator!
-      &n§7Reason: %reason%"
+    lore:
+      - "<dark_gray>------------------"
+      - "<gray>Vendedor: %player%"
+      - "<gray>Precio: %price%"
+      - ""
+      - "<red>¡Expirado por un moderador!"
+      - "<gray>Razón: %reason%"
   admin-delete-item:
-    lore: "§8------------------
-      &n§7Seller: %player%
-      &n§7Price: %price%
-      &n
-      &n§cDeleted by a moderator!
-      &n§7Reason: %reason%"
+    lore:
+      - "<dark_gray>------------------"
+      - "<gray>Vendedor: %player%"
+      - "<gray>Precio: %price%"
+      - ""
+      - "<red>¡Eliminado por un moderador!"
+      - "<gray>Razón: %reason%"
   buy-item:
-    name: "§6Buy Item right now!"
-    lore: "
-      &n§7Price: %price%
-      &n
-      &n§eClick to buy!"
+    name: "<gold>¡Comprar Item ahora mismo!"
+    lore:
+      - ""
+      - "<gray>Precio: %price%"
+      - ""
+      - "<yellow>¡Click para comprar!"
   not-enough-money:
-    name: "§6Buy Item right now!"
-    lore: "
-      &n§7You need %price%§7 to buy this item!
-      &n
-      &n§cNot enough money!"
+    name: "<gold>¡Comprar Item ahora mismo!"
+    lore:
+      - ""
+      - "<gray>¡Necesitas %price%<gray> para comprar este item!"
+      - ""
+      - "<red>¡No hay suficiente dinero!"
   confirm-buy:
-    name: "§aConfirm"
-    lore: "§7Cost: %price%"
+    name: "<green>Confirmar"
+    lore:
+      - "<gray>Costo: %price%"
   collect-sold:
-    name: "§aCollect Sold Item"
-    lore: "
-      &n§7Value with taxes: %price%
-      &n
-      &n§eClick to collect!"
+    name: "<green>Recoger Item Vendido"
+    lore:
+      - ""
+      - "<gray>Valor con impuestos: %price%"
+      - ""
+      - "<yellow>¡Click para recoger!"
   choose-item-buy-amount:
-    name: "§fChoose amount to buy!"
-    lore: "§7You can choose to buy only a few items
-      &n§7with the price being reduced accordingly
-      &n
-      &n§eClick to set!"
+    name: "<white>¡Elige la cantidad a comprar!"
+    lore:
+      - "<gray>Puedes elegir comprar solo algunos items"
+      - "<gray>con el precio reducido acordemente"
+      - ""
+      - "<yellow>¡Click para establecer!"
   loading:
-    name: "loading..."
+    name: "cargando..."
 
 
 world:
-  npc: "§6Auction Master"
+  npc: "<gold>Maestro de Subastas"
   displays:
-    sign-interaction: "§d[CLICK]"
-    by-player: "by: "
+    sign-interaction: "<light_purple>[CLICK]"
+    by-player: "por: "
 
 commands:
   sell: "sell"
@@ -328,44 +377,46 @@ commands:
   contains_lore: "contains_lore"
 
 command-feedback:
-  usage: "§eUsage: /ah sell <price> <amount>"
-  reached-max-auctions: "§eYou can only have %limit% auctions at a time"
-  no-item-in-hand: "§eYou need to hold an item in your hand to sell it"
-  invalid-number: "That is not a valid number"
-  invalid-number2: "That is not a valid price"
-  invalid-number3: "§eThat is not a valid amount of days"
-  invalid-number4: "§eThat is not a valid duration"
-  invalid-number5: "Item rank number must be greater than 0"
-  invalid-number6: "Invalid item rank number. Please enter a valid number"
-  invalid-number7: "That is not a valid amount"
-  auction: "§eYou have put up an auction for %price%"
-  announcements-enabled: "§aAuction announcements enabled! §7You will now see when players put items on auction."
-  announcements-disabled: "§cAuction announcements disabled! §7You will no longer see when players put items on auction."
-  ban-usage: "$eUsage: /ah ban <player> <time in days> <reason>"
-  pardon-usage: "§eUsage: /ah pardon <player>"
-  player-not-found: "§eThat player is not online"
-  ban: "§b-------------------------------------------------
-    &n§e%player% was banned from the ah for %duration% days.
-    &n§rReason: %reason%
-    &n§b-------------------------------------------------"
-  pardon: "§b-------------------------------------------------
-    &n§fUnbanned %player% from the auction house
-    &n§b-------------------------------------------------"
-  no-banned-players: "§eThere are no players banned"
-  not-banned: "That player isn't banned from the auction house"
-  reload: "§eThe auction house plugin has reloaded."
-  summon-usage: "/ah summon <entity>"
-  npc-usage: "/ah summon npc facing <direction>"
-  display-usage: "/ah summon display <sort type> <item rank>"
-  no-space-for-display: "§eThere is already a display here. Please remove it first."
-  blacklist-usage: "§eUsage: /ah blacklist add <type> <text>&n§rFor <exact> and <material> you don't need <text>, but hold an item in your hand"
-  blacklist-undo: "Successfully removed the last rule"
-  blacklist-undo-error: "There are no rules"
-  blacklist-no-item-in-hand: "§eYou need to hold an item in your hand to add its properties to the blacklist"
-  blacklist-success: "Successfully added the properties of %item% to the blacklist"
-  blacklist-name-success: "Successfully added \"%name%\" to the blacklist"
-  item-blacklisted: "§cYou cannot auction this item!"
+  usage: "<yellow>Uso: /ah sell <precio> <cantidad>"
+  reached-max-auctions: "<yellow>Solo puedes tener %limit% subastas al mismo tiempo"
+  no-item-in-hand: "<yellow>Necesitas sostener un item en tu mano para venderlo"
+  invalid-number: "Ese no es un número válido"
+  invalid-number2: "Ese no es un precio válido"
+  invalid-number3: "<yellow>Esa no es una cantidad de días válida"
+  invalid-number4: "<yellow>Esa no es una duración válida"
+  invalid-number5: "El número de rango del item debe ser mayor a 0"
+  invalid-number6: "Número de rango de item inválido. Por favor ingresa un número válido"
+  invalid-number7: "Esa no es una cantidad válida"
+  auction: "<yellow>Has puesto una subasta por %price%"
+  announcements-enabled: "<green>¡Anuncios de subasta habilitados! <gray>Ahora verás cuando los jugadores pongan items en subasta."
+  announcements-disabled: "<red>¡Anuncios de subasta deshabilitados! <gray>Ya no verás cuando los jugadores pongan items en subasta."
+  ban-usage: "<yellow>Uso: /ah ban <jugador> <tiempo en días> <razón>"
+  pardon-usage: "<yellow>Uso: /ah pardon <jugador>"
+  player-not-found: "<yellow>Ese jugador no está en línea"
+  ban:
+    - "<aqua>-------------------------------------------------"
+    - "<yellow>%player% fue baneado de la casa de subastas por %duration% días."
+    - "<reset>Razón: %reason%"
+    - "<aqua>-------------------------------------------------"
+  pardon:
+    - "<aqua>-------------------------------------------------"
+    - "<white>Desbaneado %player% de la casa de subastas"
+    - "<aqua>-------------------------------------------------"
+  no-banned-players: "<yellow>No hay jugadores baneados"
+  not-banned: "Ese jugador no está baneado de la casa de subastas"
+  reload: "<yellow>El plugin de casa de subastas se ha recargado."
+  summon-usage: "/ah summon <entidad>"
+  npc-usage: "/ah summon npc facing <dirección>"
+  display-usage: "/ah summon display <tipo de orden> <rango de item>"
+  no-space-for-display: "<yellow>Ya hay un display aquí. Por favor elimínalo primero."
+  blacklist-usage: "<yellow>Uso: /ah blacklist add <tipo> <texto>&n<reset>Para <exact> y <material> no necesitas <texto>, pero sostén un item en tu mano"
+  blacklist-undo: "Se eliminó exitosamente la última regla"
+  blacklist-undo-error: "No hay reglas"
+  blacklist-no-item-in-hand: "<yellow>Necesitas sostener un item en tu mano para agregar sus propiedades a la lista negra"
+  blacklist-success: "Se agregaron exitosamente las propiedades de %item% a la lista negra"
+  blacklist-name-success: "Se agregó exitosamente \"%name%\" a la lista negra"
+  item-blacklisted: "<red>¡No puedes subastar este item!"
 
 placeholders:
-  announcements-enabled: "§aEnabled"
-  announcements-disabled: "§cDisabled"
+  announcements-enabled: "<green>Habilitado"
+  announcements-disabled: "<red>Deshabilitado"

@@ -29,6 +29,15 @@ public class SettingManager {
     public static boolean autoCollect;
     public static boolean auctionAnnouncementsEnabled;
 
+    public static String soundClick;
+    public static String soundOpenEnderchest;
+    public static String soundCloseEnderchest;
+    public static String soundBreakWood;
+    public static String soundExperience;
+    public static String soundVillagerDeny;
+    public static String soundOpenShulker;
+    public static String soundCloseShulker;
+
     static {
         loadData();
     }
@@ -37,7 +46,7 @@ public class SettingManager {
         FileConfiguration c = AuctionHouse.getPlugin().getConfig();
         currencySymbol = c.getString("currency", " coins");
         taxRate = c.getDouble("tax", 0.01);
-        auctionDuration = c.getLong("auction-duration", 60*60*48);
+        auctionDuration = c.getLong("auction-duration", 60 * 60 * 48);
         auctionSetupTime = c.getLong("auction-setup-time", 30);
         fillerItem = c.getString("filler-item", "BLACK_STAINED_GLASS_PANE");
         defaultMaxAuctions = c.getInt("default-max-auctions", 10);
@@ -48,21 +57,33 @@ public class SettingManager {
         permissionModerate = c.getString("admin-permission", "auctionhouse.moderator");
         currencyBeforeNumber = c.getBoolean("currency-before-number", false);
         partialSelling = c.getBoolean("partial-selling", false);
-//        useRedis = c.getBoolean("multi-server-database.redis", false);
-//        redisHost = c.getString("multi-server-database.redis-host", "");
-//        redisUsername = c.getString("multi-server-database.redis-username", "default");
-//        redisPassword = c.getString("multi-server-database.redis-password", "");
-//        redisPort = c.getInt("multi-server-database.redis-port", 0);
+        // useRedis = c.getBoolean("multi-server-database.redis", false);
+        // redisHost = c.getString("multi-server-database.redis-host", "");
+        // redisUsername = c.getString("multi-server-database.redis-username",
+        // "default");
+        // redisPassword = c.getString("multi-server-database.redis-password", "");
+        // redisPort = c.getInt("multi-server-database.redis-port", 0);
         displayUpdateTicks = c.getInt("display-update", 80);
         autoCollect = c.getBoolean("auto-collect", false);
         auctionAnnouncementsEnabled = c.getBoolean("auction-announcements", true);
+
+        soundClick = c.getString("sounds.click", "UI_STONECUTTER_SELECT_RECIPE");
+        soundOpenEnderchest = c.getString("sounds.open-enderchest", "BLOCK_ENDER_CHEST_OPEN");
+        soundCloseEnderchest = c.getString("sounds.close-enderchest", "BLOCK_ENDER_CHEST_CLOSE");
+        soundBreakWood = c.getString("sounds.break-wood", "BLOCK_WOOD_BREAK");
+        soundExperience = c.getString("sounds.experience", "ENTITY_EXPERIENCE_ORB_PICKUP");
+        soundVillagerDeny = c.getString("sounds.villager-deny", "ENTITY_VILLAGER_NO");
+        soundOpenShulker = c.getString("sounds.open-shulker", "BLOCK_SHULKER_BOX_OPEN");
+        soundCloseShulker = c.getString("sounds.close-shulker", "BLOCK_SHULKER_BOX_CLOSE");
     }
 
-//    multi-server-database:
-//    redis: false                              # if Redis as a database should be used. Needed for multiserver support
-//    redis-host: ""                            # this is the host/link that points to your database, something like "redis-xxxxx.cXXX.eu-central-1-1.ec2.redns.redis-cloud.com"
-//    redis-username: "default"                 # usually it's just "default"
-//    redis-password: ""
-//    redis-port:                               # the port is the last thing in your public endpoint
+    // multi-server-database:
+    // redis: false # if Redis as a database should be used. Needed for multiserver
+    // support
+    // redis-host: "" # this is the host/link that points to your database,
+    // something like "redis-xxxxx.cXXX.eu-central-1-1.ec2.redns.redis-cloud.com"
+    // redis-username: "default" # usually it's just "default"
+    // redis-password: ""
+    // redis-port: # the port is the last thing in your public endpoint
 
 }

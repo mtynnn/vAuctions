@@ -1,4 +1,4 @@
-currency: " coins"
+currency: " monedas"
 currency-before-number: false               # i.e.: $5 instead of 5$
 tax: 0.01                                   # 1% tax
 auction-duration: 172800                    # the time an auction lasts in seconds
@@ -13,3 +13,13 @@ partial-selling: false                      # allows players to select the amoun
 admin-permission: "auctionhouse.moderator"
 display-update: 80                          # 20 ticks = 1 second, how frequently the item displays are updated; can be set to 1 for instant updates
 auction-announcements: true                 # announce when someone puts an item on auction (players can toggle this with /ah announce)
+
+sounds:
+  click: "UI_STONECUTTER_SELECT_RECIPE"
+  open-enderchest: "BLOCK_ENDER_CHEST_OPEN"
+  close-enderchest: "BLOCK_ENDER_CHEST_CLOSE"
+  break-wood: "BLOCK_WOOD_BREAK"
+  experience: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  villager-deny: "ENTITY_VILLAGER_NO"
+  open-shulker: "BLOCK_SHULKER_BOX_OPEN"
+  close-shulker: "BLOCK_SHULKER_BOX_CLOSE"
